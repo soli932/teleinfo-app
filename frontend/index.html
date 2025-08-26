@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleinfo - Gestión de Guías</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Teleinfo</h1>
+            <p>Gestión de Guías Técnicas</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sección de Login -->
+        <section id="loginSection" class="login-section">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+        </section>
+
+        <!-- Panel de Administración (inicialmente oculto) -->
+        <section id="adminPanel" class="admin-panel">
+            <h2>Panel de Administración - <span id="userRole"></span></h2>
+            
+            <!-- Formulario para subir nuevas guías -->
+            <div class="upload-form">
+                <h3>Agregar Nueva Guía</h3>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="guideName">Nombre de la guía:</label>
+                        <input type="text" id="guideName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guideCategory">Categoría:</label>
+                        <select id="guideCategory" required>
+                            <option value="">Seleccione una categoría</option>
+                            <option value="HOB">HOB</option>
+                            <option value="AWS">AWS</option>
+                            <option value="WINDOWS">WINDOWS</option>
+                            <option value="LINUX">LINUX</option>
+                            <option value="CBB">CBB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guideFile">Seleccionar archivo PDF:</label>
+                        <input type="file" id="guideFile" accept=".pdf" required>
+                    </div>
+                    <button type="submit">Subir Guía</button>
+                </form>
+            </div>
+            
+            <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+        </section>
+
+        <!-- Visualización de guías por categoría -->
+        <section id="guidesSection">
+            <h2>Guías Disponibles</h2>
+            <div class="categories">
+                <!-- Las categorías se cargarán dinámicamente -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Teleinfo - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

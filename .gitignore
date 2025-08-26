@@ -1,0 +1,28 @@
+# Entorno virtual Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+
+# Base de datos SQLite
+backend/*.db
+backend/teleinfo.db
+
+# Archivos subidos por usuarios
+uploads/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Configuraciones sensibles
+*.env
+.env.local
+.env.production
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
